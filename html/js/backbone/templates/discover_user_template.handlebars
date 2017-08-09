@@ -1,0 +1,34 @@
+<div class="col-xs-4 col-md-3 img-wrapper-div">
+	<div class="img-div discover-user-div">
+		<img class="profile-picture" src="{{photo}}" />
+		<div class="name-div">
+			<i class="icon-online"></i>
+			{{#if age}}
+	    	<span id="first-name-age">{{first_name}}, {{age}}</span>
+			{{else}}
+			<span id="first-name-age">{{first_name}}</span>
+			{{/if}}
+		</div>
+		<div class="distance-div">
+			<span>{{distance}}mi</span>
+		</div>
+			 <a class="view-profile-div" href="{{profile_url}}">
+		         <span>View</span>
+		         <span>Profile</span>
+		     </a>
+		{{#if is_logged_in_user}}
+		<div class="rise-to-the-top-div">
+			<h4>RISE TO THE TOP!</h4>
+			<a class="profile-link" href={{profile_url}}>
+				<img class="profile-pic-small" src="{{photo}}" />
+			</a>
+			<div class="become-a-vip-div" id="btn-rise-to-the-top">
+    			<a class="become-a-vip prevent-default" href="#" data-toggle="modal" 
+					data-target="#discover-rise-to-the-top-modal">
+	    			<span>GET SEEN FIRST</span> 
+	    		</a>
+    		</div>
+		</div>
+		{{/if}}
+	</div>
+</div>

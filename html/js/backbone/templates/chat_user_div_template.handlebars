@@ -1,0 +1,29 @@
+<div class="chat-user-div {{#if is_online}}online{{else}}offline{{/if}} {{#if is_active}}active{{/if}}" 
+		data-conversation-id="{{conversation_id}}"
+	 	data-conversation-pusher-channel-name="{{conversation_pusher_channel_name}}"
+		data-stream-name="{{stream_name}}"
+		data-send-url="{{send_url}}"
+		data-receive-url="{{receive_url}}">
+	{{#if is_group_chat}}
+		<div class="group-chat">
+			<i class="broadcast-icon"></i>
+			<span class="group-users-count">{{group_user_count}}</span>
+		</div>
+	{{else}}
+		<img src="{{photo}}" />
+	{{/if}}
+	<div class="user-name-div">
+		{{#if is_active}}
+		{{else}}
+			{{#if message_count}}
+				<span class="message-count">{{message_count}}</span>
+			{{/if}}
+		{{/if}}
+		<span class="user-name">{{first_name}}</span>
+		{{#if is_online}}
+			<span class="last-message">{{last_message}}</span>
+		{{else}}
+			<span class="offline-text">Offline</span>
+		{{/if}}
+	</div>
+</div>

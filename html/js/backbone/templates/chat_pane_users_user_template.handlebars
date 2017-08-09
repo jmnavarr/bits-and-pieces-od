@@ -1,0 +1,8 @@
+<div class="btn-chat-pane-users">
+	<span>{{first_name}}</span>
+	{{#if can_modify_participant_list}}
+	<a href="#" class="prevent-default remove-user-from-conversation" data-user-id="{{user_id}}">
+		<i class="remove-icon"></i>
+	</a>
+	{{/if}}
+</div>
